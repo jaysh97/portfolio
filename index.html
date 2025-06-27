@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineer Portfolio</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon - can be replaced with your own -->
+    <link rel="icon" href="https://placehold.co/32x32/6366f1/ffffff?text=P" type="image/png">
+
+    <style>
+        /* Custom styles for a smooth, professional feel */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* A very light gray background */
+            color: #1f2937; /* Dark gray for text */
+        }
+        .section-title {
+            @apply text-3xl font-bold text-gray-800 mb-8 text-center;
+        }
+        .card {
+            @apply bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+        }
+        .btn {
+            @apply inline-block px-6 py-3 rounded-lg font-semibold text-white transition-transform duration-200;
+        }
+        .btn-primary {
+            @apply bg-indigo-600 hover:bg-indigo-700 hover:scale-105;
+        }
+        .btn-secondary {
+            @apply bg-gray-700 hover:bg-gray-800 hover:scale-105;
+        }
+        /* Animation for sections appearing on scroll */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-600">J. Natarajan</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition-colors duration-200">About</a>
+                <a href="#skills" class="text-gray-600 hover:text-indigo-600 transition-colors duration-200">Skills</a>
+                <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition-colors duration-200">Projects</a>
+                <a href="#experience" class="text-gray-600 hover:text-indigo-600 transition-colors duration-200">Experience</a>
+            </div>
+            <a href="#contact" class="btn btn-primary hidden md:inline-block">Contact Me</a>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#about" class="block py-2 px-6 text-sm text-gray-700 hover:bg-indigo-50">About</a>
+            <a href="#skills" class="block py-2 px-6 text-sm text-gray-700 hover:bg-indigo-50">Skills</a>
+            <a href="#projects" class="block py-2 px-6 text-sm text-gray-700 hover:bg-indigo-50">Projects</a>
+            <a href="#experience" class="block py-2 px-6 text-sm text-gray-700 hover:bg-indigo-50">Experience</a>
+            <a href="#contact" class="block py-2 px-6 text-sm text-gray-700 hover:bg-indigo-50">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Hero Section -->
+        <section id="hero" class="flex flex-col md:flex-row items-center justify-between min-h-[70vh] text-center md:text-left">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-800 leading-tight mb-4">Jayashree Natarajan</h1>
+                <h2 class="text-2xl text-indigo-600 font-semibold mb-6">Full Stack Software Engineer</h2>
+                <p class="text-lg text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">I build elegant, efficient, and scalable web applications. Turning complex problems into simple, beautiful, and intuitive designs.</p>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="https://github.com/your-username" target="_blank" class="btn btn-secondary">GitHub</a>
+                </div>
+            </div>
+            <div class="md:w-1/3">
+                <img src="https://placehold.co/400x400/e0e7ff/6366f1?text=Your+Photo" 
+                     alt="Placeholder for Jayashree Natarajan's photo" 
+                     class="rounded-full shadow-2xl w-64 h-64 md:w-full md:h-auto object-cover mx-auto"
+                     onerror="this.onerror=null; this.src='https://placehold.co/400x400/e0e7ff/6366f1?text=Image+Error';">
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 scroll-mt-20">
+            <div class="text-center">
+                <h2 class="section-title">About Me</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Hello! I'm a passionate software engineer with a knack for creating dynamic and user-friendly web experiences. With a background in computer science and several years of hands-on experience, I've honed my skills in both front-end and back-end development. I thrive on collaboration, continuous learning, and tackling challenging problems to deliver high-quality software solutions. When I'm not coding, I enjoy [Your Hobby 1] and [Your Hobby 2].
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-gray-100 rounded-2xl scroll-mt-20">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 max-w-4xl mx-auto text-center">
+                <!-- Skill Item -->
+                <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <img src="https://placehold.co/64x64/ffffff/000000?text=JS" class="w-16 h-16 mb-2" alt="JavaScript Icon">
+                    <span class="font-semibold">JavaScript (ES6+)</span>
+                </div>
+                <!-- Skill Item -->
+                <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <img src="https://placehold.co/64x64/ffffff/000000?text=React" class="w-16 h-16 mb-2" alt="React Icon">
+                    <span class="font-semibold">React</span>
+                </div>
+                <!-- Skill Item -->
+                <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <img src="https://placehold.co/64x64/ffffff/000000?text=Node" class="w-16 h-16 mb-2" alt="Node.js Icon">
+                    <span class="font-semibold">Node.js</span>
+                </div>
+                <!-- Skill Item -->
+                <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <img src="https://placehold.co/64x64/ffffff/000000?text=Py" class="w-16 h-16 mb-2" alt="Python Icon">
+                    <span class="font-semibold">Python</span>
+                </div>
+                <!-- Skill Item -->
+                <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                     <img src="https://placehold.co/64x64/ffffff/000000?text=SQL" class="w-16 h-16 mb-2" alt="SQL Icon">
+                    <span class="font-semibold">SQL & NoSQL</span>
+                </div>
+                <!-- Add more skills as needed -->
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 scroll-mt-20">
+            <h2 class="section-title">My Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="card">
+                    <img src="https://placehold.co/600x400/e0e7ff/3730a3?text=Project+One" alt="Project 1 Screenshot" class="w-full h-48 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/600x400/e0e7ff/3730a3?text=Image+Error';">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Project Title One</h3>
+                        <p class="text-gray-600 mb-4">A brief description of the project, its purpose, and the technologies used. Keep it concise and impactful.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="btn btn-primary text-sm">Live Demo</a>
+                            <a href="#" class="btn btn-secondary text-sm">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="card">
+                    <img src="https://placehold.co/600x400/d1fae5/047857?text=Project+Two" alt="Project 2 Screenshot" class="w-full h-48 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/600x400/d1fae5/047857?text=Image+Error';">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Project Title Two</h3>
+                        <p class="text-gray-600 mb-4">A brief description of the project, its purpose, and the technologies used. Keep it concise and impactful.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="btn btn-primary text-sm">Live Demo</a>
+                            <a href="#" class="btn btn-secondary text-sm">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="card">
+                    <img src="https://placehold.co/600x400/fee2e2/991b1b?text=Project+Three" alt="Project 3 Screenshot" class="w-full h-48 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/600x400/fee2e2/991b1b?text=Image+Error';">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Project Title Three</h3>
+                        <p class="text-gray-600 mb-4">A brief description of the project, its purpose, and the technologies used. Keep it concise and impactful.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="btn btn-primary text-sm">Live Demo</a>
+                            <a href="#" class="btn btn-secondary text-sm">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 bg-gray-100 rounded-2xl scroll-mt-20">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="max-w-3xl mx-auto">
+                <!-- Experience Item 1 -->
+                <div class="relative pl-8 sm:pl-12 py-6 group">
+                    <!-- Vertical Line -->
+                    <div class="absolute left-2 sm:left-4 top-0 h-full w-0.5 bg-gray-300"></div>
+                    <!-- Dot -->
+                    <div class="absolute left-0 sm:left-2 top-8 w-4 h-4 rounded-full bg-indigo-600 border-4 border-gray-100 transform group-hover:scale-125 transition-transform"></div>
+                    <p class="text-sm font-medium text-indigo-600">Jan 2021 - Present</p>
+                    <h3 class="text-xl font-bold mt-1">Senior Software Engineer</h3>
+                    <p class="text-md text-gray-700 mb-2">Tech Company Inc.</p>
+                    <ul class="list-disc pl-5 text-gray-600">
+                        <li>Led the development of a major feature for a SaaS platform.</li>
+                        <li>Mentored junior developers and conducted code reviews.</li>
+                        <li>Improved application performance by 30% through optimization.</li>
+                    </ul>
+                </div>
+                <!-- Experience Item 2 -->
+                <div class="relative pl-8 sm:pl-12 py-6 group">
+                    <div class="absolute left-2 sm:left-4 top-0 h-full w-0.5 bg-gray-300"></div>
+                    <div class="absolute left-0 sm:left-2 top-8 w-4 h-4 rounded-full bg-indigo-600 border-4 border-gray-100 transform group-hover:scale-125 transition-transform"></div>
+                    <p class="text-sm font-medium text-indigo-600">Jun 2018 - Dec 2020</p>
+                    <h3 class="text-xl font-bold mt-1">Software Engineer</h3>
+                    <p class="text-md text-gray-700 mb-2">Startup Innovations LLC</p>
+                    <ul class="list-disc pl-5 text-gray-600">
+                        <li>Developed and maintained REST APIs for the main product.</li>
+                        <li>Contributed to front-end development using React and Redux.</li>
+                        <li>Worked in an Agile environment with weekly sprints.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 text-center scroll-mt-20">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+                I'm currently open to new opportunities and collaborations. If you have a project in mind or just want to say hi, feel free to reach out. Let's build something amazing together!
+            </p>
+            <a href="mailto:jayashree10natarajan@gmail.com?subject=Job Opportunity&body=Hello Jayashree," 
+               class="btn btn-primary text-lg">
+                Email Me
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://github.com/your-username" target="_blank" class="hover:text-indigo-400 transition-colors">GitHub</a>
+                <a href="https://linkedin.com/in/your-profile" target="_blank" class="hover:text-indigo-400 transition-colors">LinkedIn</a>
+                <a href="https://twitter.com/your-handle" target="_blank" class="hover:text-indigo-400 transition-colors">Twitter</a>
+            </div>
+            <p>&copy; 2024 Jayashree Natarajan. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // JavaScript for Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // JavaScript for Scroll Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up-active');
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.classList.add('fade-in-up');
+            observer.observe(section);
+        });
+
+        // Close mobile menu when a link is clicked
+        const menuLinks = document.querySelectorAll('#mobile-menu a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
