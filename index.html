@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jayashree Natarajan | Software Engineer</title>
-       <!-- Google tag (gtag.js) -->
+        <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFZVP9FLDL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -37,6 +37,8 @@
                 linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
             background-size: 40px 40px;
+            /* Removed scroll-snapping for the whole page */
+            /* Removed overflow-y: scroll; */
         }
 
         /* Glassmorphism navigation bar with a border */
@@ -129,15 +131,6 @@
             transform: scale(0);
             transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
-        #experience-timeline-container.timeline-active .timeline-dot {
-            transform: scale(1);
-        }
-        /* Staggered delays for each timeline item and dot */
-        .timeline-item:nth-child(1) { transition-delay: 0.2s; }
-        .timeline-item:nth-child(2) { transition-delay: 0.4s; }
-        .timeline-item:nth-child(3) { transition-delay: 0.6s; }
-        .timeline-item:nth-child(4) { transition-delay: 0.8s; }
-        
         #experience-timeline-container.timeline-active .timeline-item:nth-child(1) .timeline-dot { transition-delay: 0.3s; }
         #experience-timeline-container.timeline-active .timeline-item:nth-child(2) .timeline-dot { transition-delay: 0.5s; }
         #experience-timeline-container.timeline-active .timeline-item:nth-child(3) .timeline-dot { transition-delay: 0.7s; }
@@ -160,7 +153,24 @@
         
         /* Invert color for dark icons on dark backgrounds */
         .invert {
-             filter: invert(1);
+            filter: invert(1);
+        }
+
+        /* Typing Animation for Software Engineer */
+        .typewriter {
+            display: inline-block; /* Allows width animation */
+            overflow: hidden; /* Hides text outside current width */
+            white-space: nowrap; /* Keeps text on one line */
+            border-right: 0.15em solid #a855f7; /* Blinking cursor */
+            font-family: 'monospace', monospace; /* Use a monospace font for coding feel */
+            animation: blink-caret 0.75s step-end infinite; /* Only for the cursor */
+        }
+        /* Removed scroll snapping for sections */
+        section {
+            min-height: 100vh; /* Ensure sections take full viewport height */
+            display: flex; /* Use flexbox to center content vertically */
+            flex-direction: column;
+            justify-content: center;
         }
     </style>
 </head>
@@ -170,9 +180,9 @@
     <header class="glass-nav sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 grid grid-cols-2 md:grid-cols-3 items-center">
             <div class="justify-self-start">
-                 <a href="#" class="text-2xl font-bold gradient-text">J.N.</a>
+                   <a href="#" class="text-2xl font-bold gradient-text">J.N.</a>
             </div>
-           
+            
             <div class="hidden md:flex items-center justify-center space-x-8">
                 <a href="#projects" class="text-gray-400 hover:text-white transition-colors">Projects</a>
                 <a href="#experience" class="text-gray-400 hover:text-white transition-colors">Experience</a>
@@ -180,11 +190,11 @@
             </div>
 
             <div class="justify-self-end">
-                 <a href="#contact" class="hidden md:inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold px-5 py-2 rounded-full transition-transform hover:scale-105 shadow-lg shadow-purple-500/20">Contact Me</a>
-                 <!-- A placeholder for a mobile menu button can be added here -->
-                 <button class="md:hidden text-gray-400">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                 </button>
+                   <a href="#contact" class="hidden md:inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold px-5 py-2 rounded-full transition-transform hover:scale-105 shadow-lg shadow-purple-500/20">Contact Me</a>
+                   <!-- A placeholder for a mobile menu button can be added here -->
+                   <button class="md:hidden text-gray-400">
+                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                   </button>
             </div>
         </nav>
     </header>
@@ -197,7 +207,9 @@
                 <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight reveal delay-100">
                     Jayashree Natarajan
                 </h1>
-                <p class="text-2xl font-semibold text-purple-400 mt-4 mb-6 reveal delay-200">Software Engineer</p>
+                <p class="text-2xl font-semibold text-purple-400 mt-4 mb-6 reveal delay-200">
+                    <span id="typewriter-text" class="typewriter"></span>
+                </p>
                 <p class="text-lg text-gray-400 max-w-xl mx-auto md:mx-0 mb-8 reveal delay-300">
                     I build elegant, efficient, and scalable backend servers & web apps. Turning complex problems into simple, beautiful, and intuitive designs.
                 </p>
@@ -403,7 +415,7 @@
                                <label for="email" class="absolute top-3 -z-10 origin-[0] -translate-y-8 scale-75 transform text-lg text-gray-400 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-8 peer-focus:scale-75 peer-focus:text-purple-400">Your Email</label>
                             </div>
                         </div>
-                       
+                        
                         <!-- Message Field -->
                         <div class="relative z-0">
                             <textarea id="message" name="message" rows="4" class="peer block w-full appearance-none border-0 border-b-2 border-gray-600 bg-transparent py-2.5 px-0 text-lg text-white focus:border-purple-500 focus:outline-none focus:ring-0" placeholder=" " required></textarea>
@@ -517,7 +529,8 @@
                 buttonIcon.classList.remove('hidden');
                 buttonLoader.classList.add('hidden');
                 submitButton.disabled = false;
-                alert('Oops! There was a problem submitting your form.');
+                // Using a custom modal/message box instead of alert()
+                showCustomMessage('Oops! There was a problem submitting your form.', 'error');
             });
         });
 
@@ -548,11 +561,89 @@
                     }, 2000);
                 } catch (err) {
                     console.error('Failed to copy email: ', err);
-                    alert('Failed to copy email.'); // Fallback for browsers that don't support execCommand
+                    // Using a custom modal/message box instead of alert()
+                    showCustomMessage('Failed to copy email to clipboard.', 'error');
                 }
                 document.body.removeChild(textArea);
             });
         }
+
+        // --- Custom Message Box (Replaces alert/confirm) ---
+        function showCustomMessage(message, type = 'info') {
+            const messageBox = document.createElement('div');
+            messageBox.classList.add('fixed', 'bottom-8', 'left-1/2', '-translate-x-1/2', 'p-4', 'rounded-lg', 'shadow-xl', 'text-white', 'z-[1000]', 'opacity-0', 'transition-opacity', 'duration-300', 'flex', 'items-center', 'gap-2');
+
+            if (type === 'error') {
+                messageBox.classList.add('bg-red-600');
+            } else if (type === 'success') {
+                messageBox.classList.add('bg-green-600');
+            } else {
+                messageBox.classList.add('bg-blue-600');
+            }
+
+            messageBox.innerHTML = `
+                ${type === 'error' ? '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>' : ''}
+                ${type === 'success' ? '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>' : ''}
+                <span>${message}</span>
+            `;
+
+            document.body.appendChild(messageBox);
+
+            // Fade in
+            setTimeout(() => {
+                messageBox.style.opacity = '1';
+            }, 50);
+
+            // Fade out and remove
+            setTimeout(() => {
+                messageBox.style.opacity = '0';
+                messageBox.addEventListener('transitionend', () => {
+                    messageBox.remove();
+                });
+            }, 3000); // Message visible for 3 seconds
+        }
+
+        // --- Advanced Typewriter Animation with Pause and Erase ---
+        const typewriterTextElement = document.getElementById('typewriter-text');
+        const phrases = ["Software Engineer"]; // Your text here
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingSpeed = 100; // milliseconds per character
+        const deletingSpeed = 50; // milliseconds per character
+        const pauseTime = 2000; // milliseconds to pause after typing a phrase
+
+        function typeWriterEffect() {
+            const currentPhrase = phrases[phraseIndex];
+            const displayElement = typewriterTextElement;
+
+            if (isDeleting) {
+                // Deleting text
+                displayElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                // Typing text
+                displayElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let speed = isDeleting ? deletingSpeed : typingSpeed;
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                // Finished typing, now pause before deleting
+                speed = pauseTime;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                // Finished deleting, move to next phrase
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+            }
+
+            setTimeout(typeWriterEffect, speed);
+        }
+
+        // Start the typewriter effect when the window loads
+        window.addEventListener('load', typeWriterEffect);
     </script>
 </body>
 </html>
