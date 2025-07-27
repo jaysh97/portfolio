@@ -1,612 +1,692 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jayashree Natarajan | Software Engineer</title>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFZVP9FLDL"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jayashree Natarajan | Software Engineer</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XFZVP9FLDL"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-  gtag('config', 'G-XFZVP9FLDL');
+gtag('config', 'G-XFZVP9FLDL');
 </script>
-    
-        <script src="https://cdn.tailwindcss.com"></script>
-    
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-            <link rel="icon" href="https://placehold.co/32x32/a78bfa/ffffff?text=JN" type="image/png">
 
-    <style>
-        /* Base styles for the dark theme */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0d1117; /* GitHub dark background */
-            color: #c9d1d9; /* GitHub dark text */
-            /* Adding a subtle grid pattern to the background */
-            background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-            background-size: 40px 40px;
-            /* Removed scroll-snapping for the whole page */
-            /* Removed overflow-y: scroll; */
-        }
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
 
-        /* Glassmorphism navigation bar with a border */
-        .glass-nav {
-            background-color: rgba(13, 17, 23, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
+<!-- Google Fonts: Inter -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-        /* Animated gradient text for a cool effect */
-        .gradient-text {
-            @apply bg-gradient-to-r from-purple-400 via-pink-500 to-red-500;
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: gradient-animation 5s ease infinite;
-        }
+<!-- Favicon -->
+<!-- TODO: Replace with your own favicon -->
+<link rel="icon" href="https://placehold.co/32x32/a78bfa/ffffff?text=JN" type="image/png">
 
-        @keyframes gradient-animation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+<style>
+/* Base styles for the dark theme */
+body {
+font-family: 'Inter', sans-serif;
+background-color: #0d1117; /* GitHub dark background */
+color: #c9d1d9; /* GitHub dark text */
+/* Adding a subtle grid pattern to the background */
+background-image: 
+linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+background-size: 40px 40px;
+/* Removed scroll-snapping for the whole page */
+/* Removed overflow-y: scroll; */
+}
 
-        /* Enhanced card styles with a glowing effect on hover */
-        .card {
-            background-color: rgba(22, 27, 34, 0.6);
-            border: 1px solid #30363d;
-            transition: all 0.3s ease;
-        }
-        .card:hover {
-            border-color: rgba(190, 148, 243, 0.5); /* Lighter purple */
-            transform: translateY(-8px);
-            box-shadow: 0 0 25px rgba(190, 148, 243, 0.2);
-        }
+/* Glassmorphism navigation bar with a border */
+.glass-nav {
+background-color: rgba(13, 17, 23, 0.7);
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
 
-        /* Tags for skills/technologies */
-        .tag {
-            @apply text-xs font-medium px-2.5 py-1 rounded-full;
-        }
-        
-        /* Floating animation for the hero image */
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-        .hero-image-animation {
-            animation: float 6s ease-in-out infinite;
-        }
+/* Animated gradient text for a cool effect */
+.gradient-text {
+@apply bg-gradient-to-r from-purple-400 via-pink-500 to-red-500;
+background-size: 200% 200%;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: gradient-animation 5s ease infinite;
+}
 
-        /* Default reveal state */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1), transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1);
-        }
-        .reveal-active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+@keyframes gradient-animation {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
 
-        /* --- Reverted Experience Timeline Animation --- */
-        #experience-timeline-container::before {
-            content: '';
-            position: absolute;
-            left: 1rem; /* Aligns with the dots */
-            top: 0.5rem;
-            bottom: 0.5rem;
-            width: 2px;
-            background-color: #30363d; /* Timeline color */
-            transform: scaleY(0);
-            transform-origin: top;
-            transition: transform 1s ease-out;
-        }
-        #experience-timeline-container.timeline-active::before {
-            transform: scaleY(1);
-        }
-        .timeline-item {
-            opacity: 0;
-            transform: translateX(-30px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        #experience-timeline-container.timeline-active .timeline-item {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        .timeline-dot {
-            transform: scale(0);
-            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        #experience-timeline-container.timeline-active .timeline-dot {
-            transform: scale(1);
-        }
-        /* Staggered delays for each timeline item and dot */
-        .timeline-item:nth-child(1) { transition-delay: 0.2s; }
-        .timeline-item:nth-child(2) { transition-delay: 0.4s; }
-        .timeline-item:nth-child(3) { transition-delay: 0.6s; }
-        .timeline-item:nth-child(4) { transition-delay: 0.8s; }
+/* Enhanced card styles with a glowing effect on hover */
+.card {
+background-color: rgba(22, 27, 34, 0.6);
+border: 1px solid #30363d;
+transition: all 0.3s ease;
+}
+.card:hover {
+border-color: rgba(190, 148, 243, 0.5); /* Lighter purple */
+transform: translateY(-8px);
+box-shadow: 0 0 25px rgba(190, 148, 243, 0.2);
+}
 
-        
-        #experience-timeline-container.timeline-active .timeline-item:nth-child(1) .timeline-dot { transition-delay: 0.3s; }
-        #experience-timeline-container.timeline-active .timeline-item:nth-child(2) .timeline-dot { transition-delay: 0.5s; }
-        #experience-timeline-container.timeline-active .timeline-item:nth-child(3) .timeline-dot { transition-delay: 0.7s; }
-        #experience-timeline-container.timeline-active .timeline-item:nth-child(4) .timeline-dot { transition-delay: 0.9s; }
-        
-        /* Spinner for submit button */
-        .loader {
-            border: 2px solid #f3f3f3;
-            border-top: 2px solid #a855f7; /* Purple */
-            border-radius: 50%;
-            width: 16px;
-            height: 16px;
-            animation: spin 1s linear infinite;
-        }
+/* Tags for skills/technologies */
+.tag {
+@apply text-xs font-medium px-2.5 py-1 rounded-full;
+}
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        /* Invert color for dark icons on dark backgrounds */
-        .invert {
-            filter: invert(1);
-        }
+/* Floating animation for the hero image */
+@keyframes float {
+0% { transform: translateY(0px); }
+50% { transform: translateY(-10px); }
+100% { transform: translateY(0px); }
+}
+.hero-image-animation {
+animation: float 6s ease-in-out infinite;
+}
 
-        /* Typing Animation for Software Engineer */
-        .typewriter {
-            display: inline-block; /* Allows width animation */
-            overflow: hidden; /* Hides text outside current width */
-            white-space: nowrap; /* Keeps text on one line */
-            border-right: 0.15em solid #a855f7; /* Blinking cursor */
-            font-family: 'monospace', monospace; /* Use a monospace font for coding feel */
-            animation: blink-caret 0.75s step-end infinite; /* Only for the cursor */
-        }
-    
-    </style>
+/* Default reveal state */
+.reveal {
+opacity: 0;
+transform: translateY(40px);
+transition: opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1), transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1);
+}
+.reveal-active {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* --- Reverted Experience Timeline Animation --- */
+#experience-timeline-container::before {
+content: '';
+position: absolute;
+left: 1rem; /* Aligns with the dots */
+top: 0.5rem;
+bottom: 0.5rem;
+width: 2px;
+background-color: #30363d; /* Timeline color */
+transform: scaleY(0);
+transform-origin: top;
+transition: transform 1s ease-out;
+}
+#experience-timeline-container.timeline-active::before {
+transform: scaleY(1);
+}
+.timeline-item {
+opacity: 0;
+transform: translateX(-30px);
+transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+#experience-timeline-container.timeline-active .timeline-item {
+opacity: 1;
+transform: translateX(0);
+}
+.timeline-dot {
+transform: scale(0);
+transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+        #experience-timeline-container.timeline-active .timeline-dot {
+            transform: scale(1);
+        }
+        /* Staggered delays for each timeline item and dot */
+        .timeline-item:nth-child(1) { transition-delay: 0.2s; }
+        .timeline-item:nth-child(2) { transition-delay: 0.4s; }
+        .timeline-item:nth-child(3) { transition-delay: 0.6s; }
+        .timeline-item:nth-child(4) { transition-delay: 0.8s; }
+
+        
+#experience-timeline-container.timeline-active .timeline-item:nth-child(1) .timeline-dot { transition-delay: 0.3s; }
+#experience-timeline-container.timeline-active .timeline-item:nth-child(2) .timeline-dot { transition-delay: 0.5s; }
+#experience-timeline-container.timeline-active .timeline-item:nth-child(3) .timeline-dot { transition-delay: 0.7s; }
+#experience-timeline-container.timeline-active .timeline-item:nth-child(4) .timeline-dot { transition-delay: 0.9s; }
+
+/* Spinner for submit button */
+.loader {
+border: 2px solid #f3f3f3;
+border-top: 2px solid #a855f7; /* Purple */
+border-radius: 50%;
+width: 16px;
+height: 16px;
+animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+/* Invert color for dark icons on dark backgrounds */
+.invert {
+filter: invert(1);
+}
+
+/* Typing Animation for Software Engineer */
+.typewriter {
+display: inline-block; /* Allows width animation */
+overflow: hidden; /* Hides text outside current width */
+white-space: nowrap; /* Keeps text on one line */
+border-right: 0.15em solid #a855f7; /* Blinking cursor */
+font-family: 'monospace', monospace; /* Use a monospace font for coding feel */
+animation: blink-caret 0.75s step-end infinite; /* Only for the cursor */
+}
+        /* Removed scroll snapping for sections */
+        section {
+            min-height: 100vh; /* Ensure sections take full viewport height */
+            display: flex; /* Use flexbox to center content vertically */
+            flex-direction: column;
+            justify-content: center;
+        }
+    
+</style>
 </head>
 <body class="antialiased">
 
-        <header class="glass-nav sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 grid grid-cols-2 md:grid-cols-3 items-center">
-            <div class="justify-self-start">
-                   <a href="#" class="text-2xl font-bold gradient-text">J.N.</a>
-            </div>
-            
-            <div class="hidden md:flex items-center justify-center space-x-8">
-                <a href="#projects" class="text-gray-400 hover:text-white transition-colors">Projects</a>
-                <a href="#experience" class="text-gray-400 hover:text-white transition-colors">Experience</a>
-                <a href="#skills" class="text-gray-400 hover:text-white transition-colors">Skills</a>
-            </div>
+<!-- Header -->
+<header class="glass-nav sticky top-0 z-50">
+<nav class="container mx-auto px-6 py-4 grid grid-cols-2 md:grid-cols-3 items-center">
+<div class="justify-self-start">
+<a href="#" class="text-2xl font-bold gradient-text">J.N.</a>
+</div>
 
-            <div class="justify-self-end">
-                   <a href="#contact" class="hidden md:inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold px-5 py-2 rounded-full transition-transform hover:scale-105 shadow-lg shadow-purple-500/20">Contact Me</a>
-                                      <button class="md:hidden text-gray-400">
-                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                   </button>
-            </div>
-        </nav>
-    </header>
+<div class="hidden md:flex items-center justify-center space-x-8">
+<a href="#projects" class="text-gray-400 hover:text-white transition-colors">Projects</a>
+<a href="#experience" class="text-gray-400 hover:text-white transition-colors">Experience</a>
+<a href="#skills" class="text-gray-400 hover:text-white transition-colors">Skills</a>
+</div>
 
-    <main class="container mx-auto px-6 py-16">
+<div class="justify-self-end">
+<a href="#contact" class="hidden md:inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold px-5 py-2 rounded-full transition-transform hover:scale-105 shadow-lg shadow-purple-500/20">Contact Me</a>
+<!-- A placeholder for a mobile menu button can be added here -->
+<button class="md:hidden text-gray-400">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+</button>
+</div>
+</nav>
+</header>
 
-                <section id="hero" class="min-h-[80vh] flex flex-col-reverse md:flex-row items-center justify-center gap-12 text-center md:text-left">
-            <div class="md:w-3/5 reveal">
-                <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight reveal delay-100">
-                    Jayashree Natarajan
-                </h1>
-                <p class="text-2xl font-semibold text-purple-400 mt-4 mb-6 reveal delay-200">
-                    <span id="typewriter-text" class="typewriter"></span>
-                </p>
-                <p class="text-lg text-gray-400 max-w-xl mx-auto md:mx-0 mb-8 reveal delay-300">
-                    I build elegant, efficient, and scalable backend servers & web apps. Turning complex problems into simple, beautiful, and intuitive designs.
-                </p>
-                <div class="flex justify-center md:justify-start items-center space-x-6 reveal delay-400">
-                    <a href="https://github.com/jaysh97" target="_blank" class="text-gray-400 hover:text-white transition-all hover:scale-110" aria-label="GitHub">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.11.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.222.687.825.577C20.565 21.797 24 17.3 24 12 24 5.373 18.627 0 12 0z"/></svg>
-                    </a>
-                    <a href="https://linkedin.com/in/jayashree1003" target="_blank" class="text-gray-400 hover:text-white transition-all hover:scale-110" aria-label="LinkedIn">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    </a>
-                    <button id="copy-email-btn" data-email="jayashree10natarajan@gmail.com" aria-label="Copy Email Address" class="relative text-gray-400 hover:text-white transition-all hover:scale-110">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                        <span id="copy-feedback" class="absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap bg-gray-900 text-white text-xs rounded py-1 px-2 opacity-0 transition-opacity pointer-events-none">Copied!</span>
-                    </button>
-                </div>
-            </div>
-             <div class="md:w-2/5 reveal">
-                <img src="IMG_6312.JPEG" 
-                     alt="Portrait of Jayashree Natarajan"
-                     class="rounded-full w-64 h-64 md:w-full md:h-auto object-cover border-4 border-gray-800 shadow-2xl shadow-purple-900/20 hero-image-animation">
-            </div>
-        </section>
+<main class="container mx-auto px-6 py-16">
 
-                <section id="projects" class="py-24 scroll-mt-20">
-            <h2 class="text-4xl font-bold text-white text-center mb-12 reveal">Featured Projects</h2>
-            <div class="flex justify-center">                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl">                                         <div class="card p-6 flex flex-col reveal delay-100">
-                        <img src="database.png" alt="Project 1" class="rounded-lg mb-4 h-48 object-contain">
-                        <h3 class="text-xl font-bold text-white mb-2">Distributed Database & Sharding</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">This project demonstrates how to distribute large-scale workloads by implementing database sharding for both SQL and NoSQL databases.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tag bg-purple-900/50 text-purple-300">SQL</span>
-                            <span class="tag bg-green-900/50 text-green-300">MongoDB</span>
-                            <span class="tag bg-gray-700 text-gray-300">Spring</span>
-                            <span class="tag bg-red-900/50 text-red-300">Java</span>
-                            <span class="tag bg-orange-900/50 text-orange-300">Tomcat</span>
-                        </div>
-                        <a href="https://github.com/jaysh97/distirbuted-database-system" target="_blank" class="text-purple-400 hover:underline font-semibold mt-auto self-start">View on GitHub &rarr;</a>
-                    </div>
-                                        <div class="card p-6 flex flex-col reveal delay-200">
-                        <img src="aws.png" alt="Project 2" class="rounded-lg mb-4 h-48 object-contain">
-                        <h3 class="text-xl font-bold text-white mb-2">AWS Three Tier Webapp</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">An auto-scaling, fault-tolerant image classification pipeline on AWS. Built with a decoupled architecture using SQS and Lambda to provide high availability and process requests at any scale.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tag bg-gray-700/50 text-gray-300">Threading</span>
-                            <span class="tag bg-yellow-900/50 text-yellow-300">AWS Lambda</span>
-                            <span class="tag bg-orange-900/50 text-orange-300">AWS EC2</span>
-                            <span class="tag bg-red-900/50 text-red-300">Caching</span>
-                        </div>
-                        <a href="https://github.com/jaysh97/AWS_Three_Tier_WebApp" target="_blank" class="text-purple-400 hover:underline font-semibold mt-auto self-start">View on GitHub &rarr;</a>
-                    </div>
-                                        <div class="card p-6 flex flex-col reveal delay-300">
-                        <img src="hms.png" alt="Project 3" class="rounded-lg mb-4 h-48 object-contain">
-                        <h3 class="text-xl font-bold text-white mb-2">Hospital Management System</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">This advanced Hospital Management System features a robust Django REST API and a responsive React frontend. Its decoupled, full-stack architecture ensures a scalable and seamless experience for managing patients, doctors, and secure financial transactions.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tag bg-green-900/50 text-green-300">Django</span>
-                            <span class="tag bg-blue-900/50 text-blue-300">ReactJs</span>
-                            <span class="tag bg-sky-900/50 text-sky-300">TypeScript</span>
-                            <span class="tag bg-gray-700/50 text-gray-300">Enterprise</span>
-                        </div>
-                        <a href="https://github.com/jaysh97/HospitalManagement" target="_blank" class="text-purple-400 hover:underline font-semibold mt-auto self-start">View on GitHub &rarr;</a>
-                    </div>
+<!-- Hero Section -->
+<section id="hero" class="min-h-[80vh] flex flex-col-reverse md:flex-row items-center justify-center gap-12 text-center md:text-left">
+<div class="md:w-3/5 reveal">
+<h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight reveal delay-100">
+Jayashree Natarajan
+</h1>
+<p class="text-2xl font-semibold text-purple-400 mt-4 mb-6 reveal delay-200">
+<span id="typewriter-text" class="typewriter"></span>
+</p>
+<p class="text-lg text-gray-400 max-w-xl mx-auto md:mx-0 mb-8 reveal delay-300">
+I build elegant, efficient, and scalable backend servers & web apps. Turning complex problems into simple, beautiful, and intuitive designs.
+</p>
+<div class="flex justify-center md:justify-start items-center space-x-6 reveal delay-400">
+<a href="https://github.com/jaysh97" target="_blank" class="text-gray-400 hover:text-white transition-all hover:scale-110" aria-label="GitHub">
+<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.11.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.222.687.825.577C20.565 21.797 24 17.3 24 12 24 5.373 18.627 0 12 0z"/></svg>
+</a>
+<a href="https://linkedin.com/in/jayashree1003" target="_blank" class="text-gray-400 hover:text-white transition-all hover:scale-110" aria-label="LinkedIn">
+<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+</a>
+<button id="copy-email-btn" data-email="jayashree10natarajan@gmail.com" aria-label="Copy Email Address" class="relative text-gray-400 hover:text-white transition-all hover:scale-110">
+<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+<span id="copy-feedback" class="absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap bg-gray-900 text-white text-xs rounded py-1 px-2 opacity-0 transition-opacity pointer-events-none">Copied!</span>
+</button>
+</div>
+</div>
+<div class="md:w-2/5 reveal">
+<img src="IMG_6312.JPEG" 
+alt="Portrait of Jayashree Natarajan"
+class="rounded-full w-64 h-64 md:w-full md:h-auto object-cover border-4 border-gray-800 shadow-2xl shadow-purple-900/20 hero-image-animation">
+</div>
+</section>
 
-                                        <div class="card p-6 flex flex-col reveal delay-400">
-                        <img src="pngaaa.com-5697793.png" alt="Frontend Performance Load Testing" class="rounded-lg mb-4 h-48 object-contain">
-                        <h3 class="text-xl font-bold text-white mb-2">Frontend Performance Load Testing</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">This project demonstrates frontend performance load testing using a custom Java traffic simulator. It simulates concurrent user traffic to web pages and APIs, collecting key metrics and handling retries for robust analysis.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tag bg-red-900/50 text-red-300">Java</span>
-                            <span class="tag bg-gray-700/50 text-gray-300">HTTP</span>
-                            <span class="tag bg-purple-900/50 text-purple-300">Load Testing</span>
-                            <span class="tag bg-green-900/50 text-green-300">Metrics</span>
-                            <span class="tag bg-blue-900/50 text-blue-300">Concurrency</span>
-                        </div>
-                        <a href="https://github.com/jaysh97/frontend-load-testing" target="_blank" class="text-purple-400 hover:underline font-semibold mt-auto self-start">View on GitHub &rarr;</a>
-                    </div>
+<!-- Projects Section -->
+<section id="projects" class="py-24 scroll-mt-20">
+<h2 class="text-4xl font-bold text-white text-center mb-12 reveal">Featured Projects</h2>
+<div class="flex justify-center"> <!-- New wrapper for centering -->
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl"> <!-- Added max-w for proper centering -->
+<!-- Project Card 1 -->
+<div class="card p-6 flex flex-col reveal delay-100">
+<img src="database.png" alt="Project 1" class="rounded-lg mb-4 h-48 object-contain">
+<h3 class="text-xl font-bold text-white mb-2">Distributed Database & Sharding</h3>
+<p class="text-gray-400 mb-4 flex-grow">This project demonstrates how to distribute large-scale workloads by implementing database sharding for both SQL and NoSQL databases.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="tag bg-purple-900/50 text-purple-300">SQL</span>
+<span class="tag bg-green-900/50 text-green-300">MongoDB</span>
+<span class="tag bg-gray-700 text-gray-300">Spring</span>
+<span class="tag bg-red-900/50 text-red-300">Java</span>
+<span class="tag bg-orange-900/50 text-orange-300">Tomcat</span>
+</div>
+<a href="https://github.com/jaysh97/distirbuted-database-system" target="_blank" class="text-purple-400 hover:underline font-semibold mt-auto self-start">View on GitHub &rarr;</a>
+</div>
+<!-- Project Card 2 -->
+<div class="card p-6 flex flex-col reveal delay-200">
+<img src="aws.png" alt="Project 2" class="rounded-lg mb-4 h-48 object-contain">
+<h3 class="text-xl font-bold text-white mb-2">AWS Three Tier Webapp</h3>
+<p class="text-gray-400 mb-4 flex-grow">An auto-scaling, fault-tolerant image classification pipeline on AWS. Built with a decoupled architecture using SQS and Lambda to provide high availability and process requests at any scale.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="tag bg-gray-700/50 text-gray-300">Threading</span>
+<span class="tag bg-yellow-900/50 text-yellow-300">AWS Lambda</span>
+<span class="tag bg-orange-900/50 text-orange-300">AWS EC2</span>
+<span class="tag bg-red-900/50 text-red-300">Caching</span>
+</div>
+<a href="https://github.com/jaysh97/AWS_Three_Tier_WebApp" target="_blank" class="text-purple-400 hover:underline font-semibold mt-auto self-start">View on GitHub &rarr;</a>
+</div>
+<!-- Project Card 3 -->
+<div class="card p-6 flex flex-col reveal delay-300">
+<img src="hms.png" alt="Project 3" class="rounded-lg mb-4 h-48 object-contain">
+<h3 class="text-xl font-bold text-white mb-2">Hospital Management System</h3>
+<p class="text-gray-400 mb-4 flex-grow">This advanced Hospital Management System features a robust Django REST API and a responsive React frontend. Its decoupled, full-stack architecture ensures a scalable and seamless experience for managing patients, doctors, and secure financial transactions.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="tag bg-green-900/50 text-green-300">Django</span>
+<span class="tag bg-blue-900/50 text-blue-300">ReactJs</span>
+<span class="tag bg-sky-900/50 text-sky-300">TypeScript</span>
+<span class="tag bg-gray-700/50 text-gray-300">Enterprise</span>
+</div>
+<a href="https://github.com/jaysh97/HospitalManagement" target="_blank" class="text-purple-400 hover:underline font-semibold mt-auto self-start">View on GitHub &rarr;</a>
+</div>
 
-                                        <div class="card p-6 flex flex-col reveal delay-500">
-                        <img src="icons8-web-crawler-64.png" alt="GSM Arena Phone Scraper" class="rounded-lg mb-4 h-48 object-contain">
-                        <h3 class="text-xl font-bold text-white mb-2">GSM Arena Phone Scraper</h3>
-                        <p class="text-gray-400 mb-4 flex-grow">This Java application uses Jsoup to scrape mobile phone details from GSM Arena and stores them in a MongoDB database. The project is structured into multiple classes for improved organization and maintainability.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tag bg-red-900/50 text-red-300">Java</span>
-                            <span class="tag bg-blue-900/50 text-blue-300">Jsoup</span>
-                            <span class="tag bg-green-900/50 text-green-300">MongoDB</span>
-                            <span class="tag bg-purple-900/50 text-purple-300">Web Scraping</span>
-                        </div>
-                        <a href="https://github.com/jaysh97/web-scrapping" target="_blank" class="text-purple-400 hover:underline font-semibold mt-auto self-start">View on GitHub &rarr;</a>
-                    </div>
+<!-- Project Card 4: Frontend Performance Load Testing -->
+<div class="card p-6 flex flex-col reveal delay-400">
+<img src="pngaaa.com-5697793.png" alt="Frontend Performance Load Testing" class="rounded-lg mb-4 h-48 object-contain">
+<h3 class="text-xl font-bold text-white mb-2">Frontend Performance Load Testing</h3>
+<p class="text-gray-400 mb-4 flex-grow">This project demonstrates frontend performance load testing using a custom Java traffic simulator. It simulates concurrent user traffic to web pages and APIs, collecting key metrics and handling retries for robust analysis.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="tag bg-red-900/50 text-red-300">Java</span>
+<span class="tag bg-gray-700/50 text-gray-300">HTTP</span>
+<span class="tag bg-purple-900/50 text-purple-300">Load Testing</span>
+<span class="tag bg-green-900/50 text-green-300">Metrics</span>
+<span class="tag bg-blue-900/50 text-blue-300">Concurrency</span>
+</div>
+<a href="https://github.com/jaysh97/frontend-load-testing" target="_blank" class="text-purple-400 hover:underline font-semibold mt-auto self-start">View on GitHub &rarr;</a>
+</div>
 
-                </div>
-            </div>
-        </section>
+<!-- Project Card 5: GSM Arena Phone Scraper -->
+<div class="card p-6 flex flex-col reveal delay-500">
+<img src="icons8-web-crawler-64.png" alt="GSM Arena Phone Scraper" class="rounded-lg mb-4 h-48 object-contain">
+<h3 class="text-xl font-bold text-white mb-2">GSM Arena Phone Scraper</h3>
+<p class="text-gray-400 mb-4 flex-grow">This Java application uses Jsoup to scrape mobile phone details from GSM Arena and stores them in a MongoDB database. The project is structured into multiple classes for improved organization and maintainability.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="tag bg-red-900/50 text-red-300">Java</span>
+<span class="tag bg-blue-900/50 text-blue-300">Jsoup</span>
+<span class="tag bg-green-900/50 text-green-300">MongoDB</span>
+<span class="tag bg-purple-900/50 text-purple-300">Web Scraping</span>
+</div>
+<a href="https://github.com/jaysh97/web-scrapping" target="_blank" class="text-purple-400 hover:underline font-semibold mt-auto self-start">View on GitHub &rarr;</a>
+</div>
 
-                <section id="experience" class="py-24 scroll-mt-20">
-            <h2 class="text-4xl font-bold text-white text-center mb-12 reveal">Work Experience</h2>
-            <div id="experience-timeline-container" class="max-w-3xl mx-auto relative">
-                <div class="space-y-12">
-                                          <div class="relative pl-12 timeline-item">
-                        <div class="absolute left-0 top-2 w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center border-2 border-purple-500 timeline-dot p-1">
-                             <img src="https://www.vectorlogo.zone/logos/amazon/amazon-tile.svg" alt="Amazon Logo" class="w-full h-full">
-                        </div>
-                        <p class="text-sm font-medium text-purple-400">Dec 2023 - Present</p>
-                        <h3 class="text-xl font-bold text-white mt-1">Software Engineer</h3>
-                        <p class="text-md text-gray-400 mb-2">Amazon</p>
-                        <ul class="list-disc pl-5 text-gray-400 space-y-1">
-                            <li>Developed and deployed a self-service portal to aid customer service agents result in 60% Ticket Reduction.</li>
-                            <li>Managed the cross-marketplace deprecation of a shopping list sharing feature freeing up 14 SWE hours.</li>
-                            <li>Reduced infrastructure costs by 43% by leading a Java backend cleanup initiative.</li>
-                        </ul>
-                    </div>
-                                          <div class="relative pl-12 timeline-item">
-                        <div class="absolute left-0 top-2 w-8 h-8 bg-black rounded-full flex items-center justify-center border-2 border-gray-600 timeline-dot p-1">
-                             <img src="https://cdn.brandfetch.io/idB8IjfqRq/theme/light/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1668078424684" alt="EY Logo" class="w-full h-full rounded-full">
-                        </div>
-                        <p class="text-sm font-medium text-purple-400">Feb 2023 - Dec 2023</p>
-                        <h3 class="text-xl font-bold text-white mt-1">Software Engineer</h3>
-                        <p class="text-md text-gray-400 mb-2">Ernst & Young (EY)</p>
-                        <ul class="list-disc pl-5 text-gray-400 space-y-1">
-                            <li>Developed dedicated webapp for small business credit application increase producitivity of merchant by 100%.</li>
-                            <li>Resolved critical defects within the CI/CD pipeline during the Q2 release support on-time production delivery.</li>
-                            <li>Contributed to front-end development using React and Redux.</li>
-                        </ul>
-                    </div>
-                                          <div class="relative pl-12 timeline-item">
-                        <div class="absolute left-0 top-2 w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center border-2 border-gray-600 timeline-dot p-1">
-                           <img src="https://www.vectorlogo.zone/logos/amazon/amazon-tile.svg" alt="Amazon Logo" class="w-full h-full">
-                        </div>
-                        <p class="text-sm font-medium text-purple-400">May 2022 - Aug 2022</p>
-                        <h3 class="text-xl font-bold text-white mt-1">Software Engineer Intern</h3>
-                        <p class="text-md text-gray-400 mb-2">Amazon</p>
-                        <ul class="list-disc pl-5 text-gray-400 space-y-1">
-                            <li>Developed a Java and ReactJS laying foundation for critical datapoints monitoring leading to 22% increased user interactions.</li>
-                            <li>Increased memory availability for the project by 15% by deleting deprecated AWS DynamoDB and other associated resources.</li>
-                            <li>Worked in an Agile environment with weekly sprints.</li>
-                        </ul>
-                    </div>
-                                          <div class="relative pl-12 timeline-item">
-                        <div class="absolute left-0 top-2 w-8 h-8 bg-white rounded-full flex items-center justify-center border-2 border-gray-600 timeline-dot p-1">
-                                                          <img src="https://cdn.brandfetch.io/idhhNl6oAg/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B" alt="Prodapt Logo" class="rounded-full">
-                        </div>
-                        <p class="text-sm font-medium text-purple-400">Jan 2019 - Dec 2019</p>
-                        <h3 class="text-xl font-bold text-white mt-1">Software Engineer</h3>
-                        <p class="text-md text-gray-400 mb-2">Prodapt Solutions</p>
-                        <ul class="list-disc pl-5 text-gray-400 space-y-1">
-                            <li>Architected a scalable application to track employee data reducing search time by 65%.</li>
-                            <li>Led a team of 4 to design tickets redirection system, controlling time breaches and increasing efficiency by 25%.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-                <section id="skills" class="py-24 scroll-mt-20">
-            <h2 class="text-4xl font-bold text-white text-center mb-12 reveal">My Tech Stack</h2>
-            <div class="flex flex-wrap justify-center gap-6 md:gap-10 max-w-5xl mx-auto">
-                <div class="text-center p-4 transition-transform hover:scale-110 reveal delay-100" title="Java">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" class="w-16 h-16 mx-auto mb-2 drop-shadow-[0_0_8px_rgba(239,68,68,0.5)]" alt="Java Icon" />
-                    <span class="font-semibold text-gray-300">Java</span>
-                </div>
-                <div class="text-center p-4 transition-transform hover:scale-110 reveal delay-200" title="Spring Boot">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original-wordmark.svg" class="w-16 h-16 mx-auto mb-2 drop-shadow-[0_0_8px_rgba(107,114,128,0.5)]" alt="Spring Boot Icon" />
-                    <span class="font-semibold text-gray-300">Spring Boot</span>
-                </div>
-                <div class="text-center p-4 transition-transform hover:scale-110 reveal delay-300" title="Python">
-                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" class="w-16 h-16 mx-auto mb-2 drop-shadow-[0_0_8px_rgba(251,191,36,0.5)]" alt="Python Icon" />
-                    <span class="font-semibold text-gray-300">Python</span>
-                </div>
-                <div class="text-center p-4 transition-transform hover:scale-110 reveal delay-400" title="React">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" class="w-16 h-16 mx-auto mb-2 drop-shadow-[0_0_8px_rgba(96,165,250,0.5)]" alt="React Icon" />
-                    <span class="font-semibold text-gray-300">React</span>
-                </div>
-                <div class="text-center p-4 transition-transform hover:scale-110 reveal delay-500" title="AWS">
-                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" class="w-16 h-16 mx-auto mb-2 drop-shadow-[0_0_8px_rgba(255,153,0,0.5)]" alt="AWS Icon" />
-                    <span class="font-semibold text-gray-300">AWS</span>
-                </div>
-                <div class="text-center p-4 transition-transform hover:scale-110 reveal delay-100" title="Kafka">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" class="w-16 h-16 mx-auto mb-2 invert" alt="Kafka Icon" />
-                    <span class="font-semibold text-gray-300">Kafka</span>
-                </div>
-                <div class="text-center p-4 transition-transform hover:scale-110 reveal delay-200" title="Kubernetes">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain-wordmark.svg" class="w-16 h-16 mx-auto mb-2 drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]" alt="Kubernetes Icon" />
-                    <span class="font-semibold text-gray-300">Kubernetes</span>
-                </div>
-                <div class="text-center p-4 transition-transform hover:scale-110 reveal delay-300" title="SQL">
-                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" class="w-16 h-16 mx-auto mb-2 drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]" alt="SQL Icon" />
-                    <span class="font-semibold text-gray-300">SQL</span>
-                </div>
-                <div class="text-center p-4 transition-transform hover:scale-110 reveal delay-400" title="NoSQL">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg" class="w-16 h-16 mx-auto mb-2 drop-shadow-[0_0_8px_rgba(77,175,82,0.5)]" alt="NoSQL Icon" />
-                    <span class="font-semibold text-gray-300">NoSQL</span>
-                </div>
-                <div class="text-center p-4 transition-transform hover:scale-110 reveal delay-500" title="Redis">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original-wordmark.svg" class="w-16 h-16 mx-auto mb-2 drop-shadow-[0_0_8px_rgba(215,58,51,0.5)]" alt="Redis Icon" />
-                    <span class="font-semibold text-gray-300">Redis</span>
-                </div>
-                <div class="text-center p-4 transition-transform hover:scale-110 reveal delay-600" title="REST API">
-                     <img src="https://placehold.co/64x64/0d1117/c9d1d9?text=API" class="w-16 h-16 mx-auto mb-2 rounded-full border-2 border-gray-600" alt="REST API Icon" />
-                    <span class="font-semibold text-gray-300">REST API</span>
-                </div>
-            </div>
-        </section>
+</div>
+</div>
+</section>
 
-                <section id="contact" class="py-24 scroll-mt-20">
-            <div class="max-w-2xl mx-auto text-center reveal">
-                <h2 class="text-4xl font-bold text-white mb-4">Let's connect!</h2>
-                <p class="text-lg text-gray-400 mb-12">
-                    Looking to hire a software engineer? Send me a message.
-                </p>
-                
-                <div id="form-wrapper" class="transition-opacity duration-500 text-left">
-                    <form id="contact-form" class="space-y-8">
-                        <input type="hidden" name="_captcha" value="false">
-                        <div class="md:flex md:gap-8">
-                                                        <div class="relative z-0 w-full md:w-1/2 mb-8 md:mb-0">
-                                <input type="text" id="name" name="name" class="peer block w-full appearance-none border-0 border-b-2 border-gray-600 bg-transparent py-2.5 px-0 text-lg text-white focus:border-purple-500 focus:outline-none focus:ring-0" placeholder=" " required />
-                                <label for="name" class="absolute top-3 -z-10 origin-[0] -translate-y-8 scale-75 transform text-lg text-gray-400 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-8 peer-focus:scale-75 peer-focus:text-purple-400">Your Name</label>
-                            </div>
-                                                         <div class="relative z-0 w-full md:w-1/2">
-                                <input type="email" id="email" name="email" class="peer block w-full appearance-none border-0 border-b-2 border-gray-600 bg-transparent py-2.5 px-0 text-lg text-white focus:border-purple-500 focus:outline-none focus:ring-0" placeholder=" " required />
-                               <label for="email" class="absolute top-3 -z-10 origin-[0] -translate-y-8 scale-75 transform text-lg text-gray-400 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-8 peer-focus:scale-75 peer-focus:text-purple-400">Your Email</label>
-                            </div>
-                        </div>
-                        
-                                                <div class="relative z-0">
-                            <textarea id="message" name="message" rows="4" class="peer block w-full appearance-none border-0 border-b-2 border-gray-600 bg-transparent py-2.5 px-0 text-lg text-white focus:border-purple-500 focus:outline-none focus:ring-0" placeholder=" " required></textarea>
-                            <label for="message" class="absolute top-3 -z-10 origin-[0] -translate-y-8 scale-75 transform text-lg text-gray-400 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-8 peer-focus:scale-75 peer-focus:text-purple-400">Your Message</label>
-                        </div>
-                        
-                        <button type="submit" id="submit-button" class="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-purple-600 px-6 py-3 font-bold text-white shadow-lg shadow-purple-500/20 transition-all duration-300 ease-out hover:ring-2 hover:ring-purple-500 hover:ring-offset-2 hover:ring-offset-slate-900">
-                            <span class="absolute inset-0 flex h-full w-full justify-center [transform:translate3d(0,0,0)] group-hover:duration-300 group-hover:ease-out [@media(prefers-reduced-motion:no-preference)]:transition-transform">
-                                <span class="w-0 flex-none opacity-0 [transform:translate3d(-25%,0,0)] group-hover:w-full group-hover:opacity-100 group-hover:[transform:translate3d(0,0,0)]">Send Message</span>
-                            </span>
-                            <span class="absolute flex h-full w-full items-center justify-center [transform:translate3d(0,0,0)] group-hover:w-0 group-hover:opacity-0 group-hover:[transform:translate3d(100%,0,0)] [@media(prefers-reduced-motion:no-preference)]:transition-transform">
-                                Send Message
-                            </span>
-                            <div id="loading-spinner" class="loader ml-3 hidden"></div>
-                        </button>
-                        <div id="form-message" class="mt-4 text-center text-green-500 hidden"></div>
-                    </form>
-                </div>
-            </div>
-        </section>
+<!-- Experience Section -->
+<section id="experience" class="py-24 scroll-mt-20">
+<h2 class="text-4xl font-bold text-white text-center mb-12 reveal">Work Experience</h2>
+<div id="experience-timeline-container" class="max-w-3xl mx-auto relative">
+<div class="space-y-12">
+<!-- Experience Item 1 -->
+<div class="relative pl-12 timeline-item">
+<div class="absolute left-0 top-2 w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center border-2 border-purple-500 timeline-dot p-1">
+<img src="https://www.vectorlogo.zone/logos/amazon/amazon-tile.svg" alt="Amazon Logo" class="w-full h-full">
+</div>
+<p class="text-sm font-medium text-purple-400">Dec 2023 - Present</p>
+<h3 class="text-xl font-bold text-white mt-1">Software Engineer</h3>
+<p class="text-md text-gray-400 mb-2">Amazon</p>
+<ul class="list-disc pl-5 text-gray-400 space-y-1">
+<li>Developed and deployed a self-service portal to aid customer service agents result in 60% Ticket Reduction.</li>
+<li>Managed the cross-marketplace deprecation of a shopping list sharing feature freeing up 14 SWE hours.</li>
+<li>Reduced infrastructure costs by 43% by leading a Java backend cleanup initiative.</li>
+</ul>
+</div>
+<!-- Experience Item 2 -->
+<div class="relative pl-12 timeline-item">
+<div class="absolute left-0 top-2 w-8 h-8 bg-black rounded-full flex items-center justify-center border-2 border-gray-600 timeline-dot p-1">
+<img src="https://cdn.brandfetch.io/idB8IjfqRq/theme/light/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1668078424684" alt="EY Logo" class="w-full h-full rounded-full">
+</div>
+<p class="text-sm font-medium text-purple-400">Feb 2023 - Dec 2023</p>
+<h3 class="text-xl font-bold text-white mt-1">Software Engineer</h3>
+<p class="text-md text-gray-400 mb-2">Ernst & Young (EY)</p>
+<ul class="list-disc pl-5 text-gray-400 space-y-1">
+<li>Developed dedicated webapp for small business credit application increase producitivity of merchant by 100%.</li>
+<li>Resolved critical defects within the CI/CD pipeline during the Q2 release support on-time production delivery.</li>
+<li>Contributed to front-end development using React and Redux.</li>
+</ul>
+</div>
+<!-- Experience Item 3: Internship -->
+<div class="relative pl-12 timeline-item">
+<div class="absolute left-0 top-2 w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center border-2 border-gray-600 timeline-dot p-1">
+<img src="https://www.vectorlogo.zone/logos/amazon/amazon-tile.svg" alt="Amazon Logo" class="w-full h-full">
+</div>
+<p class="text-sm font-medium text-purple-400">May 2022 - Aug 2022</p>
+<h3 class="text-xl font-bold text-white mt-1">Software Engineer Intern</h3>
+<p class="text-md text-gray-400 mb-2">Amazon</p>
+<ul class="list-disc pl-5 text-gray-400 space-y-1">
+<li>Developed a Java and ReactJS laying foundation for critical datapoints monitoring leading to 22% increased user interactions.</li>
+<li>Increased memory availability for the project by 15% by deleting deprecated AWS DynamoDB and other associated resources.</li>
+<li>Worked in an Agile environment with weekly sprints.</li>
+</ul>
+</div>
+<!-- Experience Item 4 -->
+<div class="relative pl-12 timeline-item">
+<div class="absolute left-0 top-2 w-8 h-8 bg-white rounded-full flex items-center justify-center border-2 border-gray-600 timeline-dot p-1">
+<!-- Correct Prodapt Icon -->
+<img src="https://cdn.brandfetch.io/idhhNl6oAg/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B" alt="Prodapt Logo" class="rounded-full">
+</div>
+<p class="text-sm font-medium text-purple-400">Jan 2019 - Dec 2019</p>
+<h3 class="text-xl font-bold text-white mt-1">Software Engineer</h3>
+<p class="text-md text-gray-400 mb-2">Prodapt Solutions</p>
+<ul class="list-disc pl-5 text-gray-400 space-y-1">
+<li>Architected a scalable application to track employee data reducing search time by 65%.</li>
+<li>Led a team of 4 to design tickets redirection system, controlling time breaches and increasing efficiency by 25%.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
 
-    </main>
+<!-- Skills Section -->
+<section id="skills" class="py-24 scroll-mt-20">
+<h2 class="text-4xl font-bold text-white text-center mb-12 reveal">My Tech Stack</h2>
+<div class="flex flex-wrap justify-center gap-6 md:gap-10 max-w-5xl mx-auto">
+<div class="text-center p-4 transition-transform hover:scale-110 reveal delay-100" title="Java">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" class="w-16 h-16 mx-auto mb-2 drop-shadow-[0_0_8px_rgba(239,68,68,0.5)]" alt="Java Icon" />
+<span class="font-semibold text-gray-300">Java</span>
+</div>
+<div class="text-center p-4 transition-transform hover:scale-110 reveal delay-200" title="Spring Boot">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original-wordmark.svg" class="w-16 h-16 mx-auto mb-2 drop-shadow-[0_0_8px_rgba(107,114,128,0.5)]" alt="Spring Boot Icon" />
+<span class="font-semibold text-gray-300">Spring Boot</span>
+</div>
+<div class="text-center p-4 transition-transform hover:scale-110 reveal delay-300" title="Python">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" class="w-16 h-16 mx-auto mb-2 drop-shadow-[0_0_8px_rgba(251,191,36,0.5)]" alt="Python Icon" />
+<span class="font-semibold text-gray-300">Python</span>
+</div>
+<div class="text-center p-4 transition-transform hover:scale-110 reveal delay-400" title="React">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" class="w-16 h-16 mx-auto mb-2 drop-shadow-[0_0_8px_rgba(96,165,250,0.5)]" alt="React Icon" />
+<span class="font-semibold text-gray-300">React</span>
+</div>
+<div class="text-center p-4 transition-transform hover:scale-110 reveal delay-500" title="AWS">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" class="w-16 h-16 mx-auto mb-2 drop-shadow-[0_0_8px_rgba(255,153,0,0.5)]" alt="AWS Icon" />
+<span class="font-semibold text-gray-300">AWS</span>
+</div>
+<div class="text-center p-4 transition-transform hover:scale-110 reveal delay-100" title="Kafka">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" class="w-16 h-16 mx-auto mb-2 invert" alt="Kafka Icon" />
+<span class="font-semibold text-gray-300">Kafka</span>
+</div>
+<div class="text-center p-4 transition-transform hover:scale-110 reveal delay-200" title="SQL">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" class="w-16 h-16 mx-auto mb-2 drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]" alt="SQL Icon" />
+<span class="font-semibold text-gray-300">SQL</span>
+</div>
+<div class="text-center p-4 transition-transform hover:scale-110 reveal delay-300" title="NoSQL">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg" class="w-16 h-16 mx-auto mb-2 drop-shadow-[0_0_8px_rgba(77,175,82,0.5)]" alt="NoSQL Icon" />
+<span class="font-semibold text-gray-300">NoSQL</span>
+</div>
+<div class="text-center p-4 transition-transform hover:scale-110 reveal delay-400" title="Redis">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original-wordmark.svg" class="w-16 h-16 mx-auto mb-2 drop-shadow-[0_0_8px_rgba(215,58,51,0.5)]" alt="Redis Icon" />
+<span class="font-semibold text-gray-300">Redis</span>
+</div>
+<div class="text-center p-4 transition-transform hover:scale-110 reveal delay-500" title="REST API">
+<img src="https://placehold.co/64x64/0d1117/c9d1d9?text=API" class="w-16 h-16 mx-auto mb-2 rounded-full border-2 border-gray-600" alt="REST API Icon" />
+<span class="font-semibold text-gray-300">REST API</span>
+</div>
+</div>
+</section>
 
-        <footer class="bg-gray-900 text-gray-400 py-8 text-center">
-        <div class="container mx-auto px-6">
-            <p>&copy; 2024 Jayashree Natarajan. All rights reserved.</p>
-            <div class="flex justify-center space-x-4 mt-4">
-                <a href="https://github.com/jaysh97" target="_blank" class="hover:text-white transition-colors" aria-label="GitHub"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.11.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.222.687.825.577C20.565 21.797 24 17.3 24 12 24 5.373 18.627 0 12 0z"/></svg></a>
-                <a href="https://linkedin.com/in/jayashree1003" target="_blank" class="hover:text-white transition-colors" aria-label="LinkedIn"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
-                <button id="copy-email-btn-footer" data-email="jayashree10natarajan@gmail.com" aria-label="Copy Email Address" class="relative hover:text-white transition-colors">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    <span id="copy-feedback-footer" class="absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap bg-gray-900 text-white text-xs rounded py-1 px-2 opacity-0 transition-opacity pointer-events-none">Copied!</span>
-                </button>
-            </div>
-        </div>
-    </footer>
+<!-- Contact Section -->
+<section id="contact" class="py-24 scroll-mt-20">
+<div class="max-w-2xl mx-auto text-center reveal">
+<h2 class="text-4xl font-bold text-white mb-4">Let's connect!</h2>
+<p class="text-lg text-gray-400 mb-12">
+Looking to hire a software engineer? Send me a message.
+</p>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
+<div id="form-wrapper" class="transition-opacity duration-500 text-left">
+<form id="contact-form" class="space-y-8">
+<input type="hidden" name="_captcha" value="false">
+<div class="md:flex md:gap-8">
+<!-- Name Field -->
+<div class="relative z-0 w-full md:w-1/2 mb-8 md:mb-0">
+<input type="text" id="name" name="name" class="peer block w-full appearance-none border-0 border-b-2 border-gray-600 bg-transparent py-2.5 px-0 text-lg text-white focus:border-purple-500 focus:outline-none focus:ring-0" placeholder=" " required />
+<label for="name" class="absolute top-3 -z-10 origin-[0] -translate-y-8 scale-75 transform text-lg text-gray-400 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-8 peer-focus:scale-75 peer-focus:text-purple-400">Your Name</label>
+</div>
+<!-- Email Field -->
+<div class="relative z-0 w-full md:w-1/2">
+<input type="email" id="email" name="email" class="peer block w-full appearance-none border-0 border-b-2 border-gray-600 bg-transparent py-2.5 px-0 text-lg text-white focus:border-purple-500 focus:outline-none focus:ring-0" placeholder=" " required />
+<label for="email" class="absolute top-3 -z-10 origin-[0] -translate-y-8 scale-75 transform text-lg text-gray-400 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-8 peer-focus:scale-75 peer-focus:text-purple-400">Your Email</label>
+</div>
+</div>
 
-            // Typewriter effect for hero section
-            const typewriterText = document.getElementById('typewriter-text');
-            const textToType = "Software Engineer";
-            let i = 0;
-            function typeWriter() {
-                if (i < textToType.length) {
-                    typewriterText.innerHTML += textToType.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, 100);
-                }
-            }
-            typeWriter();
+<!-- Message Field -->
+<div class="relative z-0">
+<textarea id="message" name="message" rows="4" class="peer block w-full appearance-none border-0 border-b-2 border-gray-600 bg-transparent py-2.5 px-0 text-lg text-white focus:border-purple-500 focus:outline-none focus:ring-0" placeholder=" " required></textarea>
+<label for="message" class="absolute top-3 -z-10 origin-[0] -translate-y-8 scale-75 transform text-lg text-gray-400 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-8 peer-focus:scale-75 peer-focus:text-purple-400">Your Message</label>
+</div>
 
-            // Copy Email functionality
-            function setupCopyEmail(buttonId, feedbackId) {
-                const copyButton = document.getElementById(buttonId);
-                const feedbackSpan = document.getElementById(feedbackId);
-                if (copyButton && feedbackSpan) {
-                    copyButton.addEventListener('click', function() {
-                        const email = this.dataset.email;
-                        navigator.clipboard.writeText(email).then(() => {
-                            feedbackSpan.classList.add('opacity-100');
-                            setTimeout(() => {
-                                feedbackSpan.classList.remove('opacity-100');
-                            }, 2000);
-                        }).catch(err => {
-                            console.error('Failed to copy email: ', err);
-                        });
-                    });
-                }
-            }
-            setupCopyEmail('copy-email-btn', 'copy-feedback');
-            setupCopyEmail('copy-email-btn-footer', 'copy-feedback-footer');
+<div class="text-center pt-4">
+<button type="submit" id="submit-button" class="w-auto flex justify-center items-center gap-3 bg-gray-800 hover:bg-gray-700 text-white font-semibold px-8 py-3 rounded-full transition-all hover:scale-105 shadow-lg disabled:bg-gray-600 disabled:cursor-not-allowed group mx-auto">
+<span id="button-text">Send Message</span>
+<svg xmlns="http://www.w3.org/2000/svg" id="button-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+<div id="button-loader" class="loader hidden"></div>
+</button>
+</div>
+</form>
+</div>
 
+<div id="success-message" class="hidden text-center p-8 bg-gray-800/50 border border-green-500 rounded-lg opacity-0 transition-opacity duration-500">
+<h3 class="text-2xl font-bold text-green-400">Thank You!</h3>
+<p class="text-gray-300 mt-2">Your message has been sent. I'll get back to you soon.</p>
+</div>
+</div>
+</section>
+</main>
 
-            // Form submission handling
-            const contactForm = document.getElementById('contact-form');
-            const submitButton = document.getElementById('submit-button');
-            const loadingSpinner = document.getElementById('loading-spinner');
-            const formMessage = document.getElementById('form-message');
-            const formWrapper = document.getElementById('form-wrapper');
+<!-- Footer -->
+<footer class="border-t border-gray-800">
+<div class="container mx-auto px-6 py-8 text-center">
+<div class="flex justify-center space-x-6 mb-4">
+<a href="https://github.com/jaysh97" target="_blank" class="text-gray-400 hover:text-white transition-all hover:scale-110" aria-label="GitHub">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.11.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.222.687.825.577C20.565 21.797 24 17.3 24 12 24 5.373 18.627 0 12 0z"/></svg>
+</a>
+<a href="https://linkedin.com/in/jayashree1003" target="_blank" class="text-gray-400 hover:text-white transition-all hover:scale-110" aria-label="LinkedIn">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+</a>
+</div>
+<p class="text-gray-500">&copy; 2025 Jayashree Natarajan. All Rights Reserved.</p>
+</div>
+</footer>
 
-            if (contactForm) {
-                contactForm.addEventListener('submit', async function(e) {
-                    e.preventDefault();
-                    submitButton.disabled = true;
-                    loadingSpinner.classList.remove('hidden');
-                    formMessage.classList.add('hidden');
+<script>
+// --- General Scroll Reveal Animation ---
+const revealObserver = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('reveal-active');
+}
+});
+}, {
+threshold: 0.1
+});
+document.querySelectorAll('.reveal').forEach(el => {
+revealObserver.observe(el);
+});
 
-                    const formData = new FormData(contactForm);
-                    const object = {};
-                    formData.forEach((value, key) => {
-                        object[key] = value;
-                    });
-                    const json = JSON.stringify(object);
+// --- Experience Timeline Animation ---
+const timelineObserver = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('timeline-active');
+timelineObserver.unobserve(entry.target); // Animate only once
+}
+});
+}, {
+threshold: 0.3 // Trigger when 30% of the section is visible
+});
+const timelineContainer = document.getElementById('experience-timeline-container');
+if (timelineContainer) {
+timelineObserver.observe(timelineContainer);
+}
 
-                    try {
-                        // Replace with your Web3Forms access key
-                        const response = await fetch('https://api.web3forms.com/submit', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                                'Accept': 'application/json'
-                            },
-                            body: json
-                        });
-                        const result = await response.json();
+// --- Contact Form Submission Logic ---
+const contactForm = document.getElementById('contact-form');
+const submitButton = document.getElementById('submit-button');
+const buttonText = document.getElementById('button-text');
+const buttonIcon = document.getElementById('button-icon');
+const buttonLoader = document.getElementById('button-loader');
+const formWrapper = document.getElementById('form-wrapper');
+const successMessage = document.getElementById('success-message');
 
-                        if (result.success) {
-                            formWrapper.classList.add('opacity-0');
-                            setTimeout(() => {
-                                formMessage.textContent = 'Message sent successfully!';
-                                formMessage.classList.remove('hidden');
-                                formMessage.classList.add('text-green-500');
-                                formWrapper.innerHTML = ''; // Clear the form
-                                formWrapper.classList.remove('opacity-0');
-                            }, 500);
-                        } else {
-                            formMessage.textContent = result.message || 'Something went wrong. Please try again.';
-                            formMessage.classList.remove('hidden');
-                            formMessage.classList.add('text-red-500');
-                        }
-                    } catch (error) {
-                        formMessage.textContent = 'There was an error sending your message. Please try again later.';
-                        formMessage.classList.remove('hidden');
-                        formMessage.classList.add('text-red-500');
-                    } finally {
-                        submitButton.disabled = false;
-                        loadingSpinner.classList.add('hidden');
-                    }
-                });
-            }
+contactForm.addEventListener('submit', function(event) {
+event.preventDefault();
 
-            // Intersection Observer for reveal animation
-            const revealElements = document.querySelectorAll('.reveal');
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
+buttonText.classList.add('hidden');
+buttonIcon.classList.add('hidden');
+buttonLoader.classList.remove('hidden');
+submitButton.disabled = true;
 
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('reveal-active');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
+const formData = new FormData(contactForm);
+const endpoint = 'https://formsubmit.co/ajax/068c06f24ff93ddcde53ee3f34f6489a';
 
-            revealElements.forEach(el => {
-                observer.observe(el);
-            });
+fetch(endpoint, {
+method: 'POST',
+body: formData,
+headers: { 'Accept': 'application/json' }
+})
+.then(response => response.json())
+.then(data => {
+formWrapper.style.opacity = '0';
+setTimeout(() => {
+formWrapper.classList.add('hidden');
+successMessage.classList.remove('hidden');
+setTimeout(() => {
+successMessage.style.opacity = '1';
+}, 50);
+}, 500);
+contactForm.reset();
+})
+.catch(error => {
+console.error('Error:', error);
+buttonText.classList.remove('hidden');
+buttonIcon.classList.remove('hidden');
+buttonLoader.classList.add('hidden');
+submitButton.disabled = false;
+// Using a custom modal/message box instead of alert()
+showCustomMessage('Oops! There was a problem submitting your form.', 'error');
+});
+});
 
-            // Timeline animation observer
-            const timelineContainer = document.getElementById('experience-timeline-container');
-            if (timelineContainer) {
-                const timelineObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            timelineContainer.classList.add('timeline-active');
-                            timelineObserver.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.3 }); // Adjust threshold as needed
-                timelineObserver.observe(timelineContainer);
-            }
-        });
-    </script>
+// --- Email Copy Logic ---
+const copyEmailBtn = document.getElementById('copy-email-btn');
+const copyFeedback = document.getElementById('copy-feedback');
 
+if(copyEmailBtn && copyFeedback) {
+copyEmailBtn.addEventListener('click', () => {
+const emailToCopy = copyEmailBtn.getAttribute('data-email');
+if (!emailToCopy) return;
+
+const textArea = document.createElement('textarea');
+
+textArea.value = emailToCopy;
+// Prevent page from scrolling
+textArea.style.position = 'fixed';
+textArea.style.top = '-9999px';
+textArea.style.left = '-9999px';
+document.body.appendChild(textArea);
+textArea.select();
+
+try {
+document.execCommand('copy');
+copyFeedback.style.opacity = '1';
+setTimeout(() => {
+copyFeedback.style.opacity = '0';
+}, 2000);
+} catch (err) {
+console.error('Failed to copy email: ', err);
+// Using a custom modal/message box instead of alert()
+showCustomMessage('Failed to copy email to clipboard.', 'error');
+}
+document.body.removeChild(textArea);
+});
+}
+
+// --- Custom Message Box (Replaces alert/confirm) ---
+function showCustomMessage(message, type = 'info') {
+const messageBox = document.createElement('div');
+messageBox.classList.add('fixed', 'bottom-8', 'left-1/2', '-translate-x-1/2', 'p-4', 'rounded-lg', 'shadow-xl', 'text-white', 'z-[1000]', 'opacity-0', 'transition-opacity', 'duration-300', 'flex', 'items-center', 'gap-2');
+
+if (type === 'error') {
+messageBox.classList.add('bg-red-600');
+} else if (type === 'success') {
+messageBox.classList.add('bg-green-600');
+} else {
+messageBox.classList.add('bg-blue-600');
+}
+
+messageBox.innerHTML = `
+               ${type === 'error' ? '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>' : ''}
+               ${type === 'success' ? '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>' : ''}
+               <span>${message}</span>
+           `;
+
+document.body.appendChild(messageBox);
+
+// Fade in
+setTimeout(() => {
+messageBox.style.opacity = '1';
+}, 50);
+
+// Fade out and remove
+setTimeout(() => {
+messageBox.style.opacity = '0';
+messageBox.addEventListener('transitionend', () => {
+messageBox.remove();
+});
+}, 3000); // Message visible for 3 seconds
+}
+
+// --- Advanced Typewriter Animation with Pause and Erase ---
+const typewriterTextElement = document.getElementById('typewriter-text');
+const phrases = ["Software Engineer"]; // Your text here
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typingSpeed = 100; // milliseconds per character
+const deletingSpeed = 50; // milliseconds per character
+const pauseTime = 2000; // milliseconds to pause after typing a phrase
+
+function typeWriterEffect() {
+const currentPhrase = phrases[phraseIndex];
+const displayElement = typewriterTextElement;
+
+if (isDeleting) {
+// Deleting text
+displayElement.textContent = currentPhrase.substring(0, charIndex - 1);
+charIndex--;
+} else {
+// Typing text
+displayElement.textContent = currentPhrase.substring(0, charIndex + 1);
+charIndex++;
+}
+
+let speed = isDeleting ? deletingSpeed : typingSpeed;
+
+if (!isDeleting && charIndex === currentPhrase.length) {
+// Finished typing, now pause before deleting
+speed = pauseTime;
+isDeleting = true;
+} else if (isDeleting && charIndex === 0) {
+// Finished deleting, move to next phrase
+isDeleting = false;
+phraseIndex = (phraseIndex + 1) % phrases.length;
+}
+
+setTimeout(typeWriterEffect, speed);
+}
+
+// Start the typewriter effect when the window loads
+window.addEventListener('load', typeWriterEffect);
+</script>
 </body>
 </html>
