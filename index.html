@@ -236,46 +236,78 @@
         <!-- Projects Section -->
         <section id="projects" class="py-24 scroll-mt-20">
             <h2 class="text-4xl font-bold text-white text-center mb-12 reveal">Featured Projects</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project Card 1 -->
-                <div class="card p-6 flex flex-col reveal delay-100">
-                    <img src="database.png" alt="Project 1" class="rounded-lg mb-4 h-48 object-contain">
-                    <h3 class="text-xl font-bold text-white mb-2">Distributed Database & Sharding</h3>
-                    <p class="text-gray-400 mb-4 flex-grow">This project demonstrates how to distribute large-scale workloads by implementing database sharding for both SQL and NoSQL databases.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="tag bg-purple-900/50 text-purple-300">SQL</span>
-                        <span class="tag bg-green-900/50 text-green-300">MongoDB</span>
-                        <span class="tag bg-gray-700 text-gray-300">Spring</span>
-                        <span class="tag bg-red-900/50 text-red-300">Java</span>
-                        <span class="tag bg-orange-900/50 text-orange-300">Tomcat</span>
+            <div class="flex justify-center"> <!-- New wrapper for centering -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl"> <!-- Added max-w for proper centering -->
+                    <!-- Project Card 1 -->
+                    <div class="card p-6 flex flex-col reveal delay-100">
+                        <img src="database.png" alt="Project 1" class="rounded-lg mb-4 h-48 object-contain">
+                        <h3 class="text-xl font-bold text-white mb-2">Distributed Database & Sharding</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">This project demonstrates how to distribute large-scale workloads by implementing database sharding for both SQL and NoSQL databases.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tag bg-purple-900/50 text-purple-300">SQL</span>
+                            <span class="tag bg-green-900/50 text-green-300">MongoDB</span>
+                            <span class="tag bg-gray-700 text-gray-300">Spring</span>
+                            <span class="tag bg-red-900/50 text-red-300">Java</span>
+                            <span class="tag bg-orange-900/50 text-orange-300">Tomcat</span>
+                        </div>
+                        <a href="https://github.com/jaysh97/distirbuted-database-system" target="_blank" class="text-purple-400 hover:underline font-semibold mt-auto self-start">View on GitHub &rarr;</a>
                     </div>
-                    <a href="https://github.com/jaysh97/distirbuted-database-system" target="_blank" class="text-purple-400 hover:underline font-semibold mt-auto self-start">View on GitHub &rarr;</a>
-                </div>
-                <!-- Project Card 2 -->
-                <div class="card p-6 flex flex-col reveal delay-200">
-                    <img src="aws.png" alt="Project 2" class="rounded-lg mb-4 h-48 object-contain">
-                    <h3 class="text-xl font-bold text-white mb-2">AWS Three Tier Webapp</h3>
-                    <p class="text-gray-400 mb-4 flex-grow">An auto-scaling, fault-tolerant image classification pipeline on AWS. Built with a decoupled architecture using SQS and Lambda to provide high availability and process requests at any scale.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="tag bg-gray-700/50 text-gray-300">Threading</span>
-                        <span class="tag bg-yellow-900/50 text-yellow-300">AWS Lambda</span>
-                        <span class="tag bg-orange-900/50 text-orange-300">AWS EC2</span>
-                        <span class="tag bg-red-900/50 text-red-300">Caching</span>
+                    <!-- Project Card 2 -->
+                    <div class="card p-6 flex flex-col reveal delay-200">
+                        <img src="aws.png" alt="Project 2" class="rounded-lg mb-4 h-48 object-contain">
+                        <h3 class="text-xl font-bold text-white mb-2">AWS Three Tier Webapp</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">An auto-scaling, fault-tolerant image classification pipeline on AWS. Built with a decoupled architecture using SQS and Lambda to provide high availability and process requests at any scale.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tag bg-gray-700/50 text-gray-300">Threading</span>
+                            <span class="tag bg-yellow-900/50 text-yellow-300">AWS Lambda</span>
+                            <span class="tag bg-orange-900/50 text-orange-300">AWS EC2</span>
+                            <span class="tag bg-red-900/50 text-red-300">Caching</span>
+                        </div>
+                        <a href="https://github.com/jaysh97/AWS_Three_Tier_WebApp" target="_blank" class="text-purple-400 hover:underline font-semibold mt-auto self-start">View on GitHub &rarr;</a>
                     </div>
-                    <a href="https://github.com/jaysh97/AWS_Three_Tier_WebApp" target="_blank" class="text-purple-400 hover:underline font-semibold mt-auto self-start">View on GitHub &rarr;</a>
-                </div>
-                <!-- Project Card 3 -->
-                <div class="card p-6 flex flex-col reveal delay-300">
-                    <img src="hms.png" alt="Project 3" class="rounded-lg mb-4 h-48 object-contain">
-                    <h3 class="text-xl font-bold text-white mb-2">Hospital Management System</h3>
-                    <p class="text-gray-400 mb-4 flex-grow">This advanced Hospital Management System features a robust Django REST API and a responsive React frontend. Its decoupled, full-stack architecture ensures a scalable and seamless experience for managing patients, doctors, and secure financial transactions.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="tag bg-green-900/50 text-green-300">Django</span>
-                        <span class="tag bg-blue-900/50 text-blue-300">ReactJs</span>
-                        <span class="tag bg-sky-900/50 text-sky-300">TypeScript</span>
-                        <span class="tag bg-gray-700/50 text-gray-300">Enterprise</span>
+                    <!-- Project Card 3 -->
+                    <div class="card p-6 flex flex-col reveal delay-300">
+                        <img src="hms.png" alt="Project 3" class="rounded-lg mb-4 h-48 object-contain">
+                        <h3 class="text-xl font-bold text-white mb-2">Hospital Management System</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">This advanced Hospital Management System features a robust Django REST API and a responsive React frontend. Its decoupled, full-stack architecture ensures a scalable and seamless experience for managing patients, doctors, and secure financial transactions.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tag bg-green-900/50 text-green-300">Django</span>
+                            <span class="tag bg-blue-900/50 text-blue-300">ReactJs</span>
+                            <span class="tag bg-sky-900/50 text-sky-300">TypeScript</span>
+                            <span class="tag bg-gray-700/50 text-gray-300">Enterprise</span>
+                        </div>
+                        <a href="https://github.com/jaysh97/HospitalManagement" target="_blank" class="text-purple-400 hover:underline font-semibold mt-auto self-start">View on GitHub &rarr;</a>
                     </div>
-                    <a href="https://github.com/jaysh97/HospitalManagement" target="_blank" class="text-purple-400 hover:underline font-semibold mt-auto self-start">View on GitHub &rarr;</a>
+
+                    <!-- Project Card 4: Frontend Performance Load Testing -->
+                    <div class="card p-6 flex flex-col reveal delay-400">
+                        <img src="pngaaa.com-5697793.png" alt="Frontend Performance Load Testing" class="rounded-lg mb-4 h-48 object-contain">
+                        <h3 class="text-xl font-bold text-white mb-2">Frontend Performance Load Testing</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">This project demonstrates frontend performance load testing using a custom Java traffic simulator. It simulates concurrent user traffic to web pages and APIs, collecting key metrics and handling retries for robust analysis.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tag bg-red-900/50 text-red-300">Java</span>
+                            <span class="tag bg-gray-700/50 text-gray-300">HTTP</span>
+                            <span class="tag bg-purple-900/50 text-purple-300">Load Testing</span>
+                            <span class="tag bg-green-900/50 text-green-300">Metrics</span>
+                            <span class="tag bg-blue-900/50 text-blue-300">Concurrency</span>
+                        </div>
+                        <a href="https://github.com/jaysh97/frontend-load-testing" target="_blank" class="text-purple-400 hover:underline font-semibold mt-auto self-start">View on GitHub &rarr;</a>
+                    </div>
+
+                    <!-- Project Card 5: GSM Arena Phone Scraper -->
+                    <div class="card p-6 flex flex-col reveal delay-500">
+                        <img src="icons8-web-crawler-64.png" alt="GSM Arena Phone Scraper" class="rounded-lg mb-4 h-48 object-contain">
+                        <h3 class="text-xl font-bold text-white mb-2">GSM Arena Phone Scraper</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">This Java application uses Jsoup to scrape mobile phone details from GSM Arena and stores them in a MongoDB database. The project is structured into multiple classes for improved organization and maintainability.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tag bg-red-900/50 text-red-300">Java</span>
+                            <span class="tag bg-blue-900/50 text-blue-300">Jsoup</span>
+                            <span class="tag bg-green-900/50 text-green-300">MongoDB</span>
+                            <span class="tag bg-purple-900/50 text-purple-300">Web Scraping</span>
+                        </div>
+                        <a href="https://github.com/jaysh97/web-scrapping" target="_blank" class="text-purple-400 hover:underline font-semibold mt-auto self-start">View on GitHub &rarr;</a>
+                    </div>
+
                 </div>
             </div>
         </section>
